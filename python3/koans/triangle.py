@@ -18,6 +18,11 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
+    if a <= 0 or b <= 0 or c <= 0:
+        raise TriangleError()
+    elif a + b <= c or a + c <= b or c + b <= a:
+        raise TriangleError()
+
     cond1 = a == b
     cond2 = a == c
     cond3 = b == c
